@@ -14,7 +14,7 @@ body {
     height: 100vh;
 }
 
-.container {
+.welcome, .thankyou {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,7 +36,7 @@ body {
     align-items: center;
 }
 
-.rating {
+.rating, .submit {
     cursor: pointer;
 }
 
@@ -68,4 +68,31 @@ body {
     border-radius: 24px;
     font-size: 18px;
     padding: 8px;    
+}
+
+.submit:hover{
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+
+.thankyou {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.thankyou-img {
+    width: 150px;
+}
+
+.result {
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(213, 19%, 18%);
+    padding: 8px 18px 8px 18px;
+    border-radius: 24px;
+}
+
+.hide {
+    display: none;
 }
