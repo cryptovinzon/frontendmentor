@@ -36,6 +36,20 @@ body {
     align-items: center;
 }
 
+.rating {
+    cursor: pointer;
+}
+
+.rating:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+
+.active {
+    background-color:hsl(217, 12%, 63%);
+    color: white;
+}
+
 .heading {
     color: white;
     font-size: 28px;
