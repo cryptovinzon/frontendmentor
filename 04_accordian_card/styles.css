@@ -1,5 +1,43 @@
+@font-face {
+    font-family: myFont;
+    src: url(./KumbhSans-VariableFont_wght.ttf);
+}
+
 /* mobile first design */
 body {
     background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-    height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px 0 16px;
+    font-family: myFont;
+    font-size: 12px;
+}
+
+.img-container {
+    margin-bottom: -28%;
+    z-index: 2;
+}
+
+.img-background {
+    margin-top: -40%;
+}
+
+.container {
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;    
+    padding: 28% 16px 10% 16px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: inherit;
+    font-weight: inherit;
 }
