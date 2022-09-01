@@ -3,17 +3,18 @@
     src: url(./KumbhSans-VariableFont_wght.ttf);
 }
 
+/* mobile first design */
 html {
     background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     background-repeat: no-repeat;
     height: 100%;
 }
-/* mobile first design */
+
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 40% 16px 0 16px;
     font-family: myFont;
     font-size: 12px;    
@@ -36,12 +37,17 @@ body {
     z-index: 2;
 }
 
-.img-background {    
+.img {
+    content: url(./images/illustration-woman-online-mobile.svg);
+}
+
+.img-background {
+    content: url(./images/bg-pattern-mobile.svg);    
     margin-top: -35%;
 }
 
 .faq-container {
-    padding: 0 12px 0 12px;
+    padding: 0 12px 0 24px;
 }
 
 .faq {
@@ -50,7 +56,7 @@ body {
 
 h1 {
     text-align: center;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 h2 {
@@ -58,6 +64,11 @@ h2 {
     font-size: inherit;
     font-weight: inherit;
     justify-content: space-between;
+}
+
+h2:hover {
+    cursor: pointer;
+    color: orange;
 }
 
 h2::after {
@@ -70,5 +81,56 @@ h2::after {
 
 .answer {
     display: none;
-    transition: 0.5s;
+    transition: 3s;
+}
+
+/* desktop design */
+@media only screen and (min-width: 375px) {
+    html {
+        display: flex;
+    }
+
+    body {
+        display: flex;
+        padding: 0 10% 0 10%;
+        font-size: 16px;        
+
+    }
+
+    .container {
+        display: grid;
+        width: 85%;
+        height: auto;
+        align-items: center;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 15% 1fr;
+        padding: 16px;
+        margin-bottom: 36px;
+    }
+
+    .img-container {        
+        grid-row: 1/-1;
+        margin: 10% 0 10% -30%;  
+    }
+
+    .img {
+        content: url(./images/illustration-woman-online-desktop.svg);
+        width: 90%;
+        z-index: 10;
+    }
+
+    .img-background {
+        content: url(./images/bg-pattern-desktop.svg);
+        width: 90%;
+        margin-top: -75%;
+    }    
+
+    h1, .faq-container {
+        text-align: left;
+        padding-left: 24px;
+    }
+
+    .faq-container {
+        align-self: flex-start;
+    }
 }
