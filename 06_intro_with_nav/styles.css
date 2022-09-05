@@ -14,17 +14,19 @@ body {
 
 header {
     grid-column: 1/-1;
-    display: flex;    
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 36px;
+    gap: 36px;
+    margin-bottom: 36px;
 }
 
-.main-header {
+nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: auto;
-    gap: 24px;
+    width: 100%;
+    gap: 36px;
 }
 
 .primary, .secondary {
@@ -103,7 +105,6 @@ h1 {
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
     align-items: flex-end;    
-    max-width: 80%;
     padding: 0 10% 0 10%;
 }
 
@@ -155,4 +156,73 @@ h1 {
     100% {
         transform: scaleY(1)
     }
+}
+
+@media screen and (max-width: 800px) {   
+    body {
+        align-items: center;
+        padding: 0;        
+        margin: 0;
+    }
+
+    header {
+        align-self: flex-start
+    }
+
+    logo {
+        padding: 12px 0 0 12px;
+    }
+
+    nav {
+        position: fixed;
+        height: 100vh;
+        width: 50%;
+        right: 0;        
+        top: 0;
+        background-color: white;
+        display: flex;
+        flex-direction: column;   
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 24px 18px 0 18px; 
+    }
+
+    .dropdown {
+        position: inherit;
+        box-shadow: none;
+        padding-left: 2em;
+    }
+
+    .primary {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .primary::before {
+        content: url(./images/icon-close-menu.svg);        
+        align-self: flex-end;
+    }
+
+    .secondary {        
+        flex-direction: column;        
+        width: 100%;
+    }
+
+    .secondary > button {
+        width: 70%;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0;
+    }
+
+    .hero {
+        content: url(./images/image-hero-mobile.png);                
+    }
+
+    
 }
