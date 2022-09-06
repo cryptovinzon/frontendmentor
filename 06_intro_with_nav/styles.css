@@ -16,14 +16,19 @@ body {
 header {
     grid-column: 1/-1;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 36px;
     margin-bottom: 36px;
 }
 
-.menu {
+.mobile-menu {
     display: none;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 nav {
@@ -47,6 +52,7 @@ nav {
     border: inherit;
     font-family: inherit;
     font-size: inherit;
+    color: inherit;
 }
 
 .expand::after{
@@ -101,8 +107,9 @@ a:hover, button:hover {
 
 h1 {
     font-size: 4em;
+    color: black;
     font-weight: bolder;
-    padding-top: 50px;
+    padding-top: 60px;    
 }
 
 .content {
@@ -123,7 +130,7 @@ h1 {
 
 .text {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
     padding-right: 48px;
     gap: 18px;
 }
@@ -137,11 +144,12 @@ h1 {
 .clients {
     padding-top: 48px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .clients > img {
-    height: 24px;
+    max-height: 24px;
+    max-width: 12em;
 }
 
 .hero {    
@@ -151,18 +159,7 @@ h1 {
     object-fit: contain;
 }
 
-@keyframes growDown {
-    0% {
-        transform: scaleY(0)
-    }
-    50% {
-        transform: scaleY(1.1)
-    }
-    100% {
-        transform: scaleY(1)
-    }
-}
-
+/* mobile */
 @media screen and (max-width: 800px) {   
     body {
         align-items: center;
@@ -171,32 +168,50 @@ h1 {
     }
 
     header {
+        display: flex;
         justify-content: space-between;
-        width: 100%;
-        align-self: flex-start
+        width: 100%;    
     }
 
     logo {
         padding: 12px 0 0 12px;
     }
 
-    .menu {
+    .mobile-menu {
         padding: 24px;
-        display: block;
+        display: block;  
+        align-self: flex-end;
+    }
+
+    .nav-container {
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;        
+        background-color: hsl(0, 0%, 8%, 0.5);     
+        display: none;
     }
 
     nav {
         position: fixed;
         height: 100vh;
-        width: 50%;
-        right: 0;        
-        top: 0;
-        background-color: white;
+        width: auto;
+        left: 40%;     
+        right: 0;   
         display: flex;
         flex-direction: column;   
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 24px 18px 0 18px;
+        background-color: white;              
+        padding: 0 18px 0 18px;
+    }
+
+    .nav-container {
+        animation: slideout 1s;
+    }
+
+    .show {
         display: block;
     }
 
@@ -208,13 +223,8 @@ h1 {
 
     .primary {
         flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .primary::before {
-        content: url(./images/icon-close-menu.svg);        
-        align-self: flex-end;
+        align-items: flex-start;     
+        width: 100%;   
     }
 
     .expand {
@@ -228,7 +238,7 @@ h1 {
     }
 
     .secondary > button {
-        width: 70%;
+        width: 100%;
     }
 
     .content {
@@ -243,7 +253,6 @@ h1 {
     }
 
     h1 {
-        color: black;
         font-size: 2em;
         font-weight: bold;
     }
@@ -262,4 +271,26 @@ h1 {
     .learn-more {
         align-self: center;
     }
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    50% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+@keyframes slideout {
+    from { 
+        margin-left : 100%;
+        width: 200%;
+    }
+    to   { 
+        margin-right : 40%;
+        width: 100%;}
 }

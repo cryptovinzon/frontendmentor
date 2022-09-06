@@ -13,34 +13,37 @@
 <body>
   <header>
       <logo><img src="./images/logo.svg" alt=""></logo>
-      <img src="./images/icon-menu.svg" class="menu" alt="">
-      <nav>
-        <div class="primary">
-          <div>          
-              <button class="expand">Features</button>            
-              <div class="dropdown hidden">
-                <a href=""><img src="./images/icon-todo.svg" alt="">Todo List</a>
-                <a href=""><img src="./images/icon-calendar.svg" alt="">Calendar</a>
-                <a href=""><img src="./images/icon-reminders.svg" alt="">Reminders</a>
-                <a href=""><img src="./images/icon-planning.svg" alt="">Planning</a>
-              </div>
+      <img src="./images/icon-menu.svg" class="mobile-menu" alt="">
+      <div class="nav-container">
+        <nav>
+          <div class="primary">
+            <img src="./images/icon-close-menu.svg" class="mobile-menu" alt="">          
+            <div>
+                <button class="expand">Features</button>            
+                <div class="dropdown hidden">
+                  <a href=""><img src="./images/icon-todo.svg" alt="">Todo List</a>
+                  <a href=""><img src="./images/icon-calendar.svg" alt="">Calendar</a>
+                  <a href=""><img src="./images/icon-reminders.svg" alt="">Reminders</a>
+                  <a href=""><img src="./images/icon-planning.svg" alt="">Planning</a>
+                </div>
+            </div>
+            <div>
+              <button class="expand">Company</button>                        
+                <div class="dropdown hidden">
+                  <a href="">History</a>
+                  <a href="">Our Team</a>
+                  <a href="">Blog</a>
+                </div>
+            </div>       
+              <a href="">Careers</a>
+              <a href="">About</a>      
           </div>
-          <div>
-            <button class="expand">Company</button>                        
-              <div class="dropdown hidden">
-                <a href="">History</a>
-                <a href="">Our Team</a>
-                <a href="">Blog</a>
-              </div>
-          </div>       
-            <a href="">Careers</a>
-            <a href="">About</a>      
-        </div>
-        <div class="secondary">      
-            <a href="">Login</a>
-            <button class="cta">Register</button>
-        </div>    
-    </nav>
+          <div class="secondary">      
+              <a href="">Login</a>
+              <button class="cta">Register</button>
+          </div>    
+      </nav>
+  </div>
   </header>
   <main class="content">
     <div class="text-container">

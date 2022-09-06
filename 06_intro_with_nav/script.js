@@ -4,3 +4,9 @@ document.querySelectorAll('.expand').forEach(expand => {
         e.target.nextElementSibling.classList.toggle('hidden')
     })
 })
+
+document.querySelectorAll('.mobile-menu').forEach(button => {
+    button.addEventListener('click', () => {
+    document.querySelector('.nav-container').classList.toggle('show')
+    })
+})
