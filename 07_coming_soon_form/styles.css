@@ -1,0 +1,118 @@
+@font-face {
+    font-family: myFont;
+    src: url(./LibreFranklin-Thin.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;       
+    font-family: myFont;
+    font-size: 20px;
+    text-align: center; 
+    color:  hsl(0, 0%, 59%);    
+}
+
+.logo {
+    max-width: 70px;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 1em;
+    color: black;
+}
+
+b {
+    font-weight: 900;
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 5% 20% 5%;
+}
+
+#email, button {
+    border: solid 1px hsl(223, 100%, 88%);
+    border-radius: 24px;
+    width: auto;
+    height: 3em;
+}
+
+#email {
+    color: black;
+    padding-left: 18px;
+}
+
+::placeholder {
+    color:  hsl(223, 100%, 88%);    
+    padding-left: 18px;
+}
+
+button {
+    color: white;
+    background-color: hsl(223, 87%, 63%);
+    box-shadow: 1px 1px 10px hsl(223, 100%, 88%);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(223, 100%, 78%);
+}
+
+img {
+    max-width: 90%;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding-bottom: 12px;
+}
+
+svg {
+    border: solid 1px hsl(0, 0%, 59%);    
+    padding: 12px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    fill: hsl(223, 87%, 63%);
+}
+
+footer {
+    font-size: 12px;
+}
+
+/* desktop */
+@media screen and (min-width:376px) {
+    body {
+        width: 100%;
+    }
+    form {
+        justify-content: center;
+        flex-direction: row;        
+        gap: 24px;        
+        padding: 10px 10px 48px 10px;
+    }
+
+    #email {
+        width: 52ch;
+    }
+
+    button {
+        min-width: 20%;
+    }
+
+    img {
+        max-width: 50%;
+    }
+}
