@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">  
+  <script src="script.js" defer></script>
   <title>Frontend Mentor | Ping coming soon page</title>
 </head>
 <body>
@@ -14,8 +15,10 @@
       <h1>We are launching <b>soon!</b></h1>
       <h2>  Subscribe and get notified</h2>
     </div>
-    <form action="#">
-      <input type="email" id="email" placeholder="Your email address...">
+    <form novalidate>
+      <div class="email-box">
+        <input type="email" class="email" placeholder="Your email address...">
+      </div>
       <button type="submit">Notify Me</button>
     </form>
     <img src="./images/illustration-dashboard.png" alt="dashboard">
