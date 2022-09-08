@@ -7,7 +7,13 @@ document.querySelector('button').addEventListener('click', () => validate(email.
 function validate(input) {
     event.preventDefault();
     const format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    input.match(format)? console.log(input) : showError();
+    input.match(format)? verified() : showError();
+}
+
+function verified() {
+    email.classList.add('verified');
+    email.classList.remove('error');
+    document.querySelector('.error-message')? document.querySelector('.error-message').remove() : null;
 }
 
 function showError() {
